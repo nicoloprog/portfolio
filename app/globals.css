@@ -20,7 +20,127 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 212, 255, 0.3);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 77, 92, 0.5);
+}
+
+/* We use @layer components for reusable visual classes.
+   This allows us to use @apply to mix Tailwind utilities with custom CSS.
+*/
+@layer components {
+  /* Glass Effects */
+  .glass {
+    @apply bg-white/5 backdrop-blur-[10px] border border-white/5;
+  }
+
+  .glass-nav {
+    @apply fixed top-0 w-full z-50 transition-all duration-300;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-nav.scrolled {
+    background: rgba(15, 23, 42, 0.9);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Text & Glow */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-400;
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .glow-effect:hover {
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+  }
+
+  /* Complex 3D Hero Card 
+     (Keeping these as custom CSS because Tailwind arbitrary values get messy with 3D)
+  */
+  .hero-card-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+
+  .hero-card-main {
+    transform-style: preserve-3d;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .hero-card-main:hover {
+    transform: translateY(-10px) rotateX(2deg) rotateY(-2deg) scale(1.02);
+    box-shadow:
+      0 30px 60px rgba(0, 212, 255, 0.2),
+      0 0 40px rgba(0, 212, 255, 0.1);
+  }
+
+  /* Helper to make the mobile menu slide work */
+  .mobile-menu {
+    @apply fixed inset-0 z-40 bg-slate-900/95 backdrop-blur-xl transition-transform duration-300 ease-in-out;
+  }
+}
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-nav {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .text-gradient {
+    background: linear-gradient(to right, #00d4ff, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glow-effect {
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  }
+
+  .glow-effect:hover {
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+  }
+}
+
+/* Scroll Animation Class (Handled by IntersectionObserver in React) */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
 }
