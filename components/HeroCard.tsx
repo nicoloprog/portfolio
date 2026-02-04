@@ -20,7 +20,7 @@ export default function HeroCard() {
           <div className="absolute inset-0 border-2 border-cyan-400/30 rounded-xl hero-card-decorative-border" />
 
           {/* Video Section */}
-          <div className="relative h-96 md:h-120 w-full bg-slate-700 overflow-hidden rounded-lg">
+          <div className="relative h-86 md:h-120 w-full bg-slate-700 overflow-hidden rounded-lg">
             <video
               ref={videoRef}
               src="/technologie.mp4"
