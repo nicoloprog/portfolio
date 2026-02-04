@@ -5,11 +5,11 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center pt-25 relative px-6"
+      className="min-h-screen flex items-center justify-center pt-22 relative px-6"
     >
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 items-center">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-4 items-center">
         <FadeIn>
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit mb-3">
             <span className="relative flex h-2.5 w-2.5">
               <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping"></span>
               <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500"></span>
@@ -18,13 +18,13 @@ export default function Hero() {
               Disponible
             </span>
           </div>
-          <h1 className="font-display font-bold text-gray-300 text-lg sm:text-lg md:text-2xl leading-tight mb-3">
+          <h1 className="font-display font-bold text-gray-300 text-lg sm:text-lg md:text-2xl leading-tight mb-2">
             Bonjour, je m'appelle Nicolas, <br />{" "}
             <span className="text-gradient text-3xl md:text-4xl">
               Développeur full-stack
             </span>
           </h1>
-          <p className="text-md md:text-lg text-slate-400 mb-4 max-w-2xl">
+          <p className="text-md md:text-lg text-slate-400 mb-2 max-w-2xl">
             Développement de projets complets, de la conception à la mise en
             production, avec une attention portée à la performance, à la
             maintenabilité et à l'expérience utilisateur.
