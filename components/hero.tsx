@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center pt-22 relative px-6"
+      className="min-h-screen flex items-center justify-center pt-18 relative px-6"
     >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-4 items-center">
         <FadeIn>
