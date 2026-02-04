@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center  relative px-6"
+      className="min-h-screen flex items-center justify-center pt-10 relative px-6"
     >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 items-center">
         <FadeIn>
@@ -25,10 +25,9 @@ export default function Hero() {
             </span>
           </h1>
           <p className="text-lg text-slate-400 mb-4 max-w-2xl">
-            Développement de projets complets, de la conception de
-            l'architecture visuelle à la mise en production, avec une attention
-            rigoureuse portée à la performance, à la maintenabilité et à
-            l'expérience utilisateur.
+            Développement de projets complets, de la conception à la mise en
+            production, avec une attention portée à la performance, à la
+            maintenabilité et à l'expérience utilisateur.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
