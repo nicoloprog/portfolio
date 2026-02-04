@@ -7,7 +7,7 @@ export default function Hero() {
       id="home"
       className="min-h-screen flex items-center justify-center pt-18 relative px-6"
     >
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-4 items-center">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6 items-center">
         <FadeIn>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit mb-3">
             <span className="relative flex h-2.5 w-2.5">
@@ -29,19 +29,12 @@ export default function Hero() {
             production, avec une attention portée à la performance, à la
             maintenabilité et à l'expérience utilisateur.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="hidden md:flex flex-wrap gap-4">
             <Link
               href="#projects" // ← replace with your path
               className="text-sm h-10 px-6 inline-flex items-center justify-center rounded-full bg-primary text-gray-300 text-background-dark font-bold hover:bg-gray-700/30 transition-all glow-effect"
             >
               Freelance
-            </Link>
-
-            <Link
-              href="#contact" // ← replace with your path
-              className="text-smh-10 px-6 inline-flex items-center justify-center rounded-full border text-gray-300 border-white/20 hover:bg-gray-700/30 transition-all"
-            >
-              Contactez-moi
             </Link>
           </div>
         </FadeIn>
