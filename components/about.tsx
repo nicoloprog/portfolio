@@ -51,7 +51,7 @@ export default function About() {
                   Full Stack Dev
                 </h3>
                 <p className="text-slate-400 text-sm">
-                  Solutions de bout en bout
+                  Solutions du début jusqu'à la fin
                 </p>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function About() {
               <div>
                 <h3 className="font-display font-bold text-xl">Design UI/UX</h3>
                 <p className="text-slate-400 text-sm">
-                  Conception centrée utilisateur
+                  Conception de design modernes et captivants
                 </p>
               </div>
             </div>
@@ -117,7 +117,9 @@ export default function About() {
               </div>
               <div>
                 <h3 className="font-display font-bold text-xl">Performance</h3>
-                <p className="text-slate-400 text-sm">Rapide et efficace</p>
+                <p className="text-slate-400 text-sm">
+                  Interface rapide et optimisée pour une expérience fluide
+                </p>
               </div>
             </div>
           </div>

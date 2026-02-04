@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 w-full z-50 glass-nav transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="md:max-w-[65.5%] mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <div className="relative size-10 flex items-center justify-center bg-white/5 rounded-lg border border-white/10 group-hover:border-primary/50 transition-colors">
@@ -42,8 +42,8 @@ export default function Navbar() {
 
         {/* CTA & Mobile Toggle */}
         <div className="flex items-center gap-4">
-          <button className="hidden sm:hidden md:flex items-center justify-center h-10 px-6 rounded-lg bg-primary text-background-dark font-display font-bold text-sm tracking-wide hover:bg-white transition-colors glow-effect">
-            Let's Talk
+          <button className="hidden sm:hidden md:flex items-center justify-center h-10 px-6 rounded-lg bg-primary text-background-dark font-display font-bold text-sm tracking-wide hover:bg-gray-700/30 transition-colors glow-effect">
+            CV
           </button>
 
           <button

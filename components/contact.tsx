@@ -7,10 +7,11 @@ export default function Contact() {
         <FadeIn className="glass rounded-3xl p-8 md:p-12">
           <div className="text-center mb-10">
             <h2 className="font-display font-bold text-3xl md:text-4xl mb-4">
-              Let's Work <span className="text-primary">Together</span>
+              Travaillons ensemble !
             </h2>
             <p className="text-slate-400">
-              Have a project in mind? I'm always open to discussing new ideas.
+              Vous avez un projet en tête ? Je suis toujours ouvert à la
+              discussion de nouvelles idées.
             </p>
           </div>
 
@@ -18,12 +19,12 @@ export default function Contact() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-300">
-                  Name
+                  Nom
                 </label>
                 <input
                   type="text"
                   className="w-full px-4 py-3 rounded-lg bg-background-dark/50 border border-white/10 text-white focus:border-primary outline-none transition-all"
-                  placeholder="John Doe"
+                  placeholder="Nom"
                 />
               </div>
               <div className="space-y-2">
@@ -44,11 +45,11 @@ export default function Contact() {
               <textarea
                 rows={4}
                 className="w-full px-4 py-3 rounded-lg bg-background-dark/50 border border-white/10 text-white focus:border-primary outline-none transition-all"
-                placeholder="Tell me about your project..."
+                placeholder="Écrivez votre message ici..."
               ></textarea>
             </div>
-            <button className="w-full h-12 rounded-lg bg-primary text-background-dark font-display font-bold text-base hover:bg-white transition-all glow-effect">
-              Send Message
+            <button className="w-full h-12 rounded-lg bg-primary text-background-dark font-display font-bold text-base hover:bg-gray-700/30 transition-all glow-effect">
+              Envoi
             </button>
           </form>
         </FadeIn>
