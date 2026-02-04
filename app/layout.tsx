@@ -15,7 +15,7 @@ const space = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Nicolas Paquette – Portfolio",
   description:
-    "Full Stack Developer. Building accessible, pixel-perfect, and performant web experiences.",
+    "Développeur full-stack. Je conçois des applications et des sites web avant-gardistes, performants et au pixel près",
 };
 
 export default function RootLayout({

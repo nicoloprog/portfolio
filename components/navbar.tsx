@@ -6,9 +6,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "About", href: "#about" },
+    { name: "À propos", href: "#about" },
     { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
+    { name: "Compétences", href: "#skills" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -27,47 +27,80 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-8">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group"
+              className="text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors"
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
-        </nav>
+        </div>
 
         {/* CTA & Mobile Toggle */}
         <div className="flex items-center gap-4">
-          <button className="hidden sm:flex items-center justify-center h-10 px-6 rounded-lg bg-primary text-background-dark font-display font-bold text-sm tracking-wide hover:bg-white transition-colors glow-effect">
+          <button className="hidden sm:hidden md:flex items-center justify-center h-10 px-6 rounded-lg bg-primary text-background-dark font-display font-bold text-sm tracking-wide hover:bg-white transition-colors glow-effect">
             Let's Talk
           </button>
+
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-slate-300 hover:text-white"
+            className="flex items-center justify-center md:hidden text-white p-2"
+            aria-label="Toggle Menu"
           >
-            <span className="material-symbols-outlined">
-              {isOpen ? "close" : "menu"}
-            </span>
+            {isOpen ? (
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 6L6 18M6 6L18 18"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            ) : (
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6H40M4 15H40"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            )}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-x-0 top-20 bg-background-dark/95 backdrop-blur-xl border-t border-white/10 md:hidden transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`absolute inset-x-0 h-[100svh] bg-zinc-900/98 backdrop-blur-2xl border border-zinc-400/20 md:hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+        }`}
       >
-        <nav className="flex flex-col p-6 gap-4">
+        <nav className="flex flex-col p-6 gap-2">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-lg font-medium text-slate-300 hover:text-white py-3 border-b border-white/5"
+              className="text-2xl font-medium text-slate-100 hover:text-white py-3"
             >
               {link.name}
             </Link>

@@ -4,9 +4,8 @@ export default function Skills() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-display text-5xl font-bold mb-4">
-            My <span className="text-primary">Skills</span>
+            Comp&eacute;tences
           </h2>
-          <p className="text-slate-400 text-lg">Technologies I use daily</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
