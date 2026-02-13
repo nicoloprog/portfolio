@@ -18,13 +18,13 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <div className="relative size-10 flex items-center justify-center bg-white/5 rounded-lg border border-white/10 group-hover:border-primary/50 transition-colors">
-            <span className="material-symbols-outlined text-primary pb-1">
+            <div className="material-symbols-outlined text-primary pb-1">
               {"</>"}
-            </span>
+            </div>
           </div>
-          <span className="font-display font-bold text-xl tracking-tight">
-            <span className="text-primary"></span>
-          </span>
+          <div className="font-display font-bold text-xl tracking-tight">
+            <div className="text-primary"></div>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -52,13 +52,7 @@ export default function Navbar() {
             aria-label="Toggle Menu"
           >
             {isOpen ? (
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path
                   d="M18 6L6 18M6 6L18 18"
                   stroke="currentColor"
@@ -68,13 +62,7 @@ export default function Navbar() {
                 />
               </svg>
             ) : (
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path
                   d="M4 6H40M4 15H40"
                   stroke="currentColor"
@@ -87,14 +75,13 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-
       {/* Mobile Menu Overlay */}
       <div
-        className={`absolute inset-x-0 h-[100svh] bg-zinc-900/98 backdrop-blur-2xl border border-zinc-400/20 md:hidden transition-all duration-300 ease-in-out ${
+        className={`absolute inset-x-0 h-[100svh] bg-gray-900/98  md:hidden transition-all duration-500 ease-in-out ${
           isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
         }`}
       >
-        <nav className="flex flex-col p-6 gap-2">
+        <nav className="flex flex-col p-6 gap-1 ">
           {navLinks.map((link) => (
             <Link
               key={link.name}

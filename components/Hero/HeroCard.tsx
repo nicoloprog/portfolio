@@ -49,9 +49,9 @@ export default function HeroCard() {
                 <p className="text-xs text-slate-300">Propulsez votre idée !</p>
               </div>
             </div>
-            <span className="hero-card-ui-arrow text-2xl transition-transform group-hover:translate-x-1">
+            <div className="hero-card-ui-arrow text-2xl transition-transform group-hover:translate-x-1">
               →
-            </span>
+            </div>
           </div>
         </div>
       </Link>

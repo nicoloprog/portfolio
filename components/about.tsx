@@ -9,20 +9,25 @@ export default function About() {
           </h2>
           <div className="space-y-4 text-slate-400">
             <p>
-              Je suis un développeur Full Stack passionné, avec plus de 5 ans
+              Je suis un développeur Full Stack passionné, avec plus de 7 ans
               d'expérience dans la création d'expériences numériques
               exceptionnelles.
             </p>
             <p>
               Je me spécialise dans la création d'applications web modernes et
-              réactives utilisant des technologies de pointe comme React,
-              Next.js et Node.js.
+              réactives utilisant des languages performants comme React, Next.js
+              et Node.js.
+            </p>
+            <p>
+              Abile avec l'intégration des LLM pour automatiser les flux de
+              travail complexes et créer des interfaces prédictives. J'apporte
+              des solutions pour intégrer des agents autonomes directement au
+              coeur de vos projets.
             </p>
           </div>
         </FadeIn>
         <FadeIn>
           <div className="glass rounded-3xl p-8 space-y-6">
-            {/* Item 1: Full Stack */}
             <div className="flex items-center gap-4">
               <div className="size-16 rounded-xl flex items-center justify-center text-primary">
                 <svg
@@ -55,8 +60,6 @@ export default function About() {
                 </p>
               </div>
             </div>
-
-            {/* Item 2: UI/UX */}
             <div className="flex items-center gap-4">
               <div className="size-16 rounded-xl bg-primary/20 flex items-center justify-center text-primary  overflow-hidden">
                 <svg
@@ -85,8 +88,6 @@ export default function About() {
                 </p>
               </div>
             </div>
-
-            {/* Item 3: Performance */}
             <div className="flex items-center gap-4">
               <div className="size-16 rounded-xl bg-primary/20 flex items-center justify-center text-primary overflow-hidden">
                 <svg

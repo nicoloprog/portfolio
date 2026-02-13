@@ -18,12 +18,12 @@ export default function Skills() {
               <h3 className="font-display text-xl font-bold mb-4">{title}</h3>
               <div className="flex flex-wrap gap-2">
                 {(items as string[]).map((skill) => (
-                  <span
+                  <div
                     key={skill}
                     className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm"
                   >
                     {skill}
-                  </span>
+                  </div>
                 ))}
               </div>
             </div>

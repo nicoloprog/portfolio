@@ -1,9 +1,9 @@
-import Navbar from "@/components/navbar";
-import Hero from "@/components/hero";
+import Navbar from "@/components/layout/navbar";
+import Hero from "@/components/Hero";
 import About from "@/components/about";
 import Skills from "@/components/skills";
 import Projects from "@/components/projects";
-import Contact from "@/components/contact";
+import Contact from "@/components/Contact";
 import Footer from "@/components/layout/Footer";
 import LiquidBackground from "@/components/LiquidBackground";
 
