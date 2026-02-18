@@ -10,8 +10,8 @@ export default function About() {
           <div className="space-y-4 text-slate-400">
             <p>
               Je suis un développeur Full Stack passionné, avec plus de 7 ans
-              d'expérience dans la création d'expériences numériques
-              exceptionnelles.
+              d'expérience dans la programmation passant de la robotique à la
+              création d'expériences numériques.
             </p>
             <p>
               Je me spécialise dans la création d'applications web modernes et

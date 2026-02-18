@@ -27,7 +27,7 @@ const projects = [
     tags: ["Next.js", "React", "Node.js", "Tailwind"],
     gradient: "from-indigo-600 to-blue-500",
     url: "https://madscientistcookie.vercel.app/",
-    hoverBorder: "hover:border-primary/50",
+    hoverBorder: "hover:border-blue-500/50",
   },
 ];
 

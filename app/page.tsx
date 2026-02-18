@@ -9,7 +9,7 @@ import LiquidBackground from "@/components/LiquidBackground";
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative overflow-hidden">
+    <main className="relative overflow-hidden">
       <LiquidBackground />
       <Navbar />
       <Hero />
