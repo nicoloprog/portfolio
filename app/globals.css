@@ -19,7 +19,7 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* Custom Scrollbar */
@@ -30,11 +30,11 @@ body {
   background: #0f172a;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 213, 255, 0.395);
+  background: rgba(0, 212, 255, 0.3);
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 77, 92, 0.784);
+  background: rgba(0, 77, 92, 0.5);
 }
 
 /* We use @layer components for reusable visual classes.
@@ -43,7 +43,7 @@ body {
 @layer components {
   /* Glass Effects */
   .glass {
-    @apply bg-black/5 backdrop-blur-[10px] border border-white/5;
+    @apply bg-white/5 backdrop-blur-[10px] border border-white/5;
   }
 
   .glass-nav {
