@@ -9,7 +9,7 @@ export default function Hero() {
     >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6 items-center">
         <FadeIn>
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit my-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit mb-3 mt-10">
             <div className="relative flex h-2.5 w-2.5">
               <div className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping"></div>
               <div className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500"></div>
