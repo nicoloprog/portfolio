@@ -133,14 +133,14 @@ body {
 /* Scroll Animation Class (Handled by IntersectionObserver in React) */
 .fade-in-section {
   opacity: 0;
-  transform: translateY(30px);
+  transform: scale(0.98);
   transition:
-    opacity 0.8s ease-out,
-    transform 0.8s ease-out;
-  will-change: opacity, visibility;
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+  will-change: opacity, transform;
 }
 
 .fade-in-section.is-visible {
   opacity: 1;
-  transform: none;
+  transform: scale(1);
 }

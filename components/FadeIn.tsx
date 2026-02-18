@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useRef, useState } from "react";
 
 export default function FadeIn({
@@ -12,14 +13,20 @@ export default function FadeIn({
   const domRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      });
-    });
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observerInstance.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px",
+      },
+    );
 
     const current = domRef.current;
     if (current) observer.observe(current);
@@ -32,7 +39,9 @@ export default function FadeIn({
   return (
     <div
       ref={domRef}
-      className={`fade-in-section ${isVisible ? "is-visible" : ""} ${className}`}
+      className={`fade-in-section ${
+        isVisible ? "is-visible" : ""
+      } ${className}`}
     >
       {children}
     </div>
