@@ -2,8 +2,8 @@
 
 /* ===== ROOT VARIABLES (FIXED — NO TRANSPARENCY) ===== */
 :root {
-  --background: #0a0a0a00; /* solid dark background */
-  --foreground: #f8fafc00; /* readable light text */
+  --background: #0a0a0a; /* solid dark background */
+  --foreground: #f8fafc; /* readable light text */
 }
 
 @theme inline {
@@ -15,7 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a00; /* keep solid */
+    --background: #0a0a0a; /* keep solid */
   }
 }
 
@@ -31,7 +31,9 @@ body {
   overflow-x: hidden;
 }
 
+/* ============================= */
 /* Custom Scrollbar */
+/* ============================= */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -46,11 +48,10 @@ body {
   background: rgba(0, 77, 92, 0.5);
 }
 
-/* We use @layer components for reusable visual classes.
-   This allows us to use @apply to mix Tailwind utilities with custom CSS.
-*/
+/* ============================= */
+/* Components Layer */
+/* ============================= */
 @layer components {
-  /* Glass Effects */
   .glass {
     @apply bg-white/5 backdrop-blur-[10px] border border-white/5;
   }
@@ -67,7 +68,6 @@ body {
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
   }
 
-  /* Text & Glow */
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-400;
   }
@@ -81,9 +81,6 @@ body {
     box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
   }
 
-  /* Complex 3D Hero Card 
-     (Keeping these as custom CSS because Tailwind arbitrary values get messy with 3D)
-  */
   .hero-card-container {
     perspective: 1000px;
     transform-style: preserve-3d;
@@ -101,11 +98,14 @@ body {
       0 0 40px rgba(0, 212, 255, 0.1);
   }
 
-  /* Helper to make the mobile menu slide work */
   .mobile-menu {
     @apply fixed inset-0 z-40 bg-slate-900/95 backdrop-blur-xl transition-transform duration-300 ease-in-out;
   }
 }
+
+/* ============================= */
+/* Utilities Layer */
+/* ============================= */
 @layer utilities {
   .glass {
     background: rgba(255, 255, 255, 0.03);
@@ -138,7 +138,9 @@ body {
   }
 }
 
-/* Scroll Animation Class (Handled by IntersectionObserver in React) */
+/* ============================= */
+/* Fade Animation */
+/* ============================= */
 .fade-in-section {
   opacity: 0;
   transform: scale(0.98);
