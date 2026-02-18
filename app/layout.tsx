@@ -26,7 +26,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${space.variable} font-body text-white bg-background-dark overflow-x-hidden selection:bg-primary selection:text-background-dark`}
+        className={`${inter.variable} ${space.variable} font-body text-white overflow-x-hidden selection:bg-primary selection:text-background-dark`}
+        style={{ backgroundColor: "transparent" }}
       >
         {children}
       </body>
