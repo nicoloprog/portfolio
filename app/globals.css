@@ -1,9 +1,8 @@
 @import "tailwindcss";
 
-/* ===== ROOT VARIABLES (FIXED — NO TRANSPARENCY) ===== */
 :root {
-  --background: #0a0a0a00; /* solid dark background */
-  --foreground: #f8fafc00; /* readable light text */
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
 @theme inline {
@@ -15,27 +14,22 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a00; /* keep solid */
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
 }
 
-/* ===== IMPORTANT FIX ===== */
-html,
-body {
-  background-color: var(--background);
-  min-height: 100vh;
-  /* Add these lines to kill the white bar */
-  margin: 0;
-  overscroll-behavior: none;
-  display: flex;
-  flex-direction: column;
+html {
+  height: -webkit-fill-available;
+  background-color: transparent;
 }
 
-/* Prevent horizontal scroll */
 body {
   overflow-x: hidden;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  background-color: transparent;
 }
-
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
