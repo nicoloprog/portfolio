@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import LiquidBackground from "@/components/LiquidBackground";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,11 +25,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-[#0f172a]">
       <body
-        className={`${inter.variable} ${space.variable} font-body text-white bg-background-dark overflow-x-hidden selection:bg-primary selection:text-background-dark`}
+        className={`${inter.variable} ${space.variable} font-body text-white bg-[#0f172a] overflow-x-hidden selection:bg-[#0f172a] selection:text-background-dark`}
       >
-        {children}
+        <LiquidBackground />
+
+        <div className="relative z-10">{children}</div>
       </body>
     </html>
   );

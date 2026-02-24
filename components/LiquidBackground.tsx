@@ -17,31 +17,32 @@ export default function LiquidBackground() {
 
     const resize = () => {
       width = window.innerWidth;
-      height = window.innerHeight;
+
+      // ✅ FIX: use visualViewport if available (prevents Google white bar bug)
+      height = window.visualViewport
+        ? window.visualViewport.height
+        : window.innerHeight;
+
       canvas.width = width;
       canvas.height = height;
     };
 
-    // Create orbs with slightly higher opacity for visibility during testing
     const orbs = Array.from({ length: 6 }, () => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
       radius: Math.random() * 200 + 150,
-      vx: (Math.random() - 0.5) * 1.2, // Slightly faster movement
+      vx: (Math.random() - 0.5) * 1.2,
       vy: (Math.random() - 0.5) * 1.2,
-      // Using hex-to-rgba for better compatibility
       color: Math.random() > 0.5 ? "0, 212, 255" : "124, 58, 237",
     }));
 
     const animate = () => {
-      // Create a trail effect or clear
       ctx.clearRect(0, 0, width, height);
 
       orbs.forEach((orb) => {
         orb.x += orb.vx;
         orb.y += orb.vy;
 
-        // Bounce logic
         if (orb.x < -orb.radius) orb.x = width + orb.radius;
         if (orb.x > width + orb.radius) orb.x = -orb.radius;
         if (orb.y < -orb.radius) orb.y = height + orb.radius;
@@ -55,6 +56,7 @@ export default function LiquidBackground() {
           orb.y,
           orb.radius,
         );
+
         gradient.addColorStop(0, `rgba(${orb.color}, 0.15)`);
         gradient.addColorStop(1, `rgba(${orb.color}, 0)`);
 
@@ -68,11 +70,14 @@ export default function LiquidBackground() {
     };
 
     window.addEventListener("resize", resize);
+    window.visualViewport?.addEventListener("resize", resize);
+
     resize();
     animate();
 
     return () => {
       window.removeEventListener("resize", resize);
+      window.visualViewport?.removeEventListener("resize", resize);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
@@ -80,7 +85,7 @@ export default function LiquidBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full -z-10 pointer-events-none bg-[#0f172a]"
+      className="fixed inset-0 w-screen h-dvh -z-1 pointer-events-none bg-[#0f172a]"
       style={{ display: "block" }}
     />
   );
