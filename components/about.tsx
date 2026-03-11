@@ -29,7 +29,7 @@ export default function About() {
         <FadeIn>
           <div className="glass rounded-3xl p-8 space-y-6">
             <div className="flex items-center gap-4">
-              <div className="size-14 md:size-16 rounded-xl flex items-center justify-center text-primary">
+              <div className="size-12 md:size-16 rounded-xl flex items-center justify-center text-primary">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -61,7 +61,7 @@ export default function About() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <div className="size-16 rounded-xl bg-primary/20 flex items-center justify-center text-primary  overflow-hidden">
+              <div className="size-13 md:size-16 rounded-xl bg-primary/20 flex items-center justify-center text-primary  overflow-hidden">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"

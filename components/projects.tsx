@@ -71,9 +71,9 @@ export default function Projects() {
                     <h3 className="font-display font-bold text-2xl text-white">
                       {project.title}
                     </h3>
-                    <button className="group inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-2xl transition-all">
-                      Voir le projet
-                    </button>
+                    <span className="material-symbols-outlined text-white text-4xl group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">
+                      ➜
+                    </span>
                   </div>
                   <p className="text-slate-400 leading-relaxed mb-6">
                     {project.desc}
