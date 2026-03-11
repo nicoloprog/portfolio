@@ -50,7 +50,7 @@ const ContactUsForm = ({ className, ...props }: ContactUsFormProps) => {
             placeholder="Votre nom"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full px-4 py-3 rounded-lg bg-[#12131E]/50 border border-white/10 text-white focus:border-[#C39E6F] outline-none transition-all placeholder:text-gray-400"
+            className="w-full px-4 py-3 rounded-lg bg-[#12131E]/50 border border-white/10 text-white focus:border-gray-200/70 outline-none transition-all placeholder:text-gray-400"
           />
         </div>
         <div className="space-y-2 text-left">
@@ -60,7 +60,7 @@ const ContactUsForm = ({ className, ...props }: ContactUsFormProps) => {
             placeholder="email@example.com"
             value={info}
             onChange={(e) => setInfo(e.target.value)}
-            className="w-full px-4 py-3 rounded-lg bg-[#12131E]/50 border border-white/10 text-white focus:border-[#C39E6F] outline-none transition-all placeholder:text-gray-400"
+            className="w-full px-4 py-3 rounded-lg bg-[#12131E]/50 border border-white/10 text-white focus:border-gray-200/70 outline-none transition-all placeholder:text-gray-400"
           />
         </div>
       </div>
@@ -70,7 +70,7 @@ const ContactUsForm = ({ className, ...props }: ContactUsFormProps) => {
           placeholder="Votre message..."
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full px-4 py-3 rounded-lg bg-[#12131E]/50 border border-white/10 text-white focus:border-[#C39E6F] outline-none transition-all placeholder:text-gray-400 resize-none"
+          className="w-full px-4 py-3 rounded-lg bg-[#12131E]/50 border border-white/10 text-white focus:border-gray-200/70 outline-none transition-all placeholder:text-gray-400 resize-none"
           rows={5}
         />
       </div>
