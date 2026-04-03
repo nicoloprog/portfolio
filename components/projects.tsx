@@ -21,12 +21,12 @@ const projects = [
     hoverBorder: "hover:border-emerald-500/50",
   },
   {
-    title: "Entreprise (USA)",
-    desc: "Développement d'une boutique complète avec paiement sécurisé. Rapidité de chargement et expérience utilisateur fluide.",
-    icon: "E-commerce",
+    title: "Application",
+    desc: "Remplacez vos habitudes de magasinage fastidieuses par une expérience fluide et agréable. En obtenant les meilleures offres.",
+    icon: "App",
     tags: ["Next.js", "React", "Node.js", "Tailwind"],
     gradient: "from-indigo-600 to-blue-500",
-    url: "https://madscientistcookie.vercel.app/",
+    url: "https://easyprice.grandiflores.com/",
     hoverBorder: "hover:border-blue-500/50",
   },
 ];
