@@ -42,9 +42,9 @@ export default function Navbar() {
 
         {/* CTA & Mobile Toggle */}
         <div className="flex items-center gap-4">
-          <button className="hidden sm:hidden md:flex items-center justify-center h-10 px-6 rounded-lg bg-primary text-background-dark font-display font-bold text-sm tracking-wide hover:bg-gray-700/30 transition-colors glow-effect">
+          {/* <button className="hidden sm:hidden md:flex items-center justify-center h-10 px-6 rounded-lg bg-primary text-background-dark font-display font-bold text-sm tracking-wide hover:bg-gray-700/30 transition-colors glow-effect">
             CV
-          </button>
+          </button> */}
 
           <button
             onClick={() => setIsOpen(!isOpen)}
