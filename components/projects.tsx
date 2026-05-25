@@ -29,6 +29,15 @@ const projects = [
     url: "https://banditprice.grandiflores.com/",
     hoverBorder: "hover:border-blue-500/50",
   },
+  {
+    title: "E-commerce",
+    desc: "Boutique en ligne pour une entreprise de vente de produits. J'ai conçu une interface utilisateur entièrement personnalisée et optimisée selon les besoins du client.",
+    icon: "E-commerce",
+    tags: ["Next.js", "React", "Node.js", "Shopify"],
+    gradient: "from-purple-600 to-black-500",
+    url: "https://snlprint.ca/",
+    hoverBorder: "hover:border-purple-500/50",
+  },
 ];
 
 export default function Projects() {
