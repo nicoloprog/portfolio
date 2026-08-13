@@ -26,7 +26,7 @@ const projects = [
     icon: "App",
     tags: ["Next.js", "React", "Node.js", "Tailwind"],
     gradient: "from-indigo-600 to-blue-500",
-    url: "https://banditprice.grandiflores.com/",
+    url: "https://banditprice.com/",
     hoverBorder: "hover:border-blue-500/50",
   },
   {
